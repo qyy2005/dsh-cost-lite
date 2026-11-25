@@ -1,0 +1,35 @@
+{
+  "name": "dsh-cost-lite",
+  "version": "0.12.0",
+  "type": "module",
+  "private": true,
+  "description": "Session cost in one number for DeepSeek Harness: composer-dock pill with this-session cost and peak/off-peak countdown, one flat panel for per-call detail, day/month totals, budget bar, and on-demand balance for official DeepSeek plus relay stations.",
+  "icon": "./icon.svg",
+  "meta": {
+    "title": "费用（精简版）/ Cost Lite",
+    "description": "输入框下方一行金额：本会话 · 今日 · 峰谷倒计时；点开是一屏明细、预算条和余额。价格可改，历史金额跟着现价重算。"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cost",
+    "billing",
+    "balance"
+  ],
+  "license": "MIT",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}
